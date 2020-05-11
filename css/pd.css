@@ -1,0 +1,253 @@
+a {
+  display: block;
+}
+img {
+  max-width: 100%;
+}
+[class^="col"] {
+  padding: 0 6px;
+  margin-bottom: 12px;
+}
+
+.pd {
+  margin-bottom: 68px;
+}
+
+.pd--fluid {
+  margin-bottom: 30px;
+}
+
+.pd--fluid img {
+  width: 100%;
+}
+
+@media screen and (max-width: 768.98px) {
+  .pd {
+    margin-bottom: 35px;
+  }
+  .pd--fluid {
+    margin-bottom: 15px;
+  }
+}
+
+.pd__banner {
+  overflow: hidden;
+}
+
+.pd__banner img {
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+.pd__banner:hover img {
+  -webkit-transform: scale(1.1) translate3d(0, 0, 0);
+  transform: scale(1.1) translate3d(0, 0, 0);
+  -webkit-transition: 1.5s cubic-bezier(0, 0.65, 0, 1);
+  transition: 1.5s cubic-bezier(0, 0.65, 0, 1);
+}
+
+.pd__video {
+  position: relative;
+  overflow: hidden;
+}
+
+.pd__video:hover .play {
+  opacity: 1;
+}
+
+.pd__video:hover .play:after {
+  -webkit-animation: circle 1.5s infinite;
+  animation: circle 1.5s infinite;
+}
+
+.pd__video:hover .play + img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-transition: 1.5s cubic-bezier(0, 0.65, 0, 1);
+  transition: 1.5s cubic-bezier(0, 0.65, 0, 1);
+}
+
+.pd__video .play {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  opacity: 0.8;
+  z-index: 5;
+}
+
+@media screen and (max-width: 768.98px) {
+  .pd__video .play {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.pd__video .play:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  border: 2px solid #fff;
+}
+
+.pd__video .play + img {
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+@-webkit-keyframes circle {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes circle {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.pd__link {
+  text-align: center;
+  position: relative;
+  padding: 6px 6px 40px;
+  height: 100%;
+  color: #333;
+  background-color: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border: 1px solid #ededed;
+}
+
+@media screen and (max-width: 768.98px) {
+  .pd__link {
+    padding-bottom: 9vw;
+  }
+}
+
+.pd__link:hover {
+  color: #333;
+  text-decoration: none;
+  -webkit-transform: translateY(-3px);
+  transform: translateY(-3px);
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pd__link:hover .pd__title:after {
+  -webkit-transform: translate(100%, -100%);
+  transform: translate(100%, -100%);
+}
+
+.pd__title {
+  margin: 0 0 8px;
+  padding: 8px 5px;
+  color: #fff;
+  background-color: #b7b7b7;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.pd__title span {
+  position: relative;
+  z-index: 2;
+}
+
+@media screen and (max-width: 575.98px) {
+  .pd__title {
+    font-size: 2.8vw;
+    line-height: 1rem;
+  }
+}
+
+.pd__title:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120%;
+  height: 200%;
+  border-radius: 0 0 0 80%;
+  background-color: #909090;
+  top: 0;
+  left: -20%;
+  z-index: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.pd__name {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 575.98px) {
+  .pd__name {
+    font-size: 3vw;
+    line-height: 1.2rem;
+  }
+}
+
+.pd__price {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+}
+
+.pd__price--old {
+  display: inline-block;
+  color: #989898;
+  text-decoration: line-through;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 575.98px) {
+  .pd__price--old {
+    font-size: 4vw;
+  }
+}
+
+.pd__price--now {
+  display: inline-block;
+  color: #ec253a;
+  font-size: 1.4rem;
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+
+.pd__price--now span {
+  font-size: 0.7em;
+  position: relative;
+  bottom: 1px;
+}
+
+@media screen and (max-width: 575.98px) {
+  .pd__price--now {
+    font-size: 5vw;
+    line-height: 1;
+  }
+}
